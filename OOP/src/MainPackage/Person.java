@@ -1,0 +1,51 @@
+package MainPackage;
+
+import java.util.Calendar;
+
+/**
+ * @author MIK
+ * demo class, using overloading
+ */
+public class Person {
+	private String fullname;
+	private String contry;
+	private Calendar birthday;
+
+	public int calcAge() {
+		Calendar now = Calendar.getInstance();
+		if(now.after(birthday))
+			return now.get(Calendar.YEAR) - birthday.get(Calendar.YEAR);
+		else
+			return -1;
+	}
+	public int calcAge(Calendar toDate){
+		if(toDate.after(birthday))
+			return toDate.get(Calendar.YEAR) - birthday.get(Calendar.YEAR);
+		else
+			return -1;
+	}
+	public String getFullname() {
+		return fullname;
+	}
+
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
+	}
+
+	public String getContry() {
+		return contry;
+	}
+
+	public void setContry(String contry) {
+		this.contry = contry;
+	}
+
+	public Calendar getBirdthday() {
+		return birthday;
+	}
+
+	public void setBirdthday(Calendar birdthday) {
+		this.birthday = birdthday;
+	}
+
+}
