@@ -1,5 +1,9 @@
 package MainPackage;
 
+/**
+ * @author MIK
+ *
+ */
 public class OngGiaNoel {
 	private String name;
 

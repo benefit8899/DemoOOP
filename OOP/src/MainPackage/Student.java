@@ -5,7 +5,7 @@ package MainPackage;
  */
 public class Student extends Person implements IPersonAction {
 	private String id;
-	private String classid;
+	private String classId;
 	public String getId() {
 		return id;
 	}
@@ -13,13 +13,14 @@ public class Student extends Person implements IPersonAction {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getClassid() {
-		return classid;
+	public String getClassId() {
+		return classId;
 	}
-	public void setClassid(String classid) {
-		this.classid = classid;
+	public void setClassId(String classId) {
+		this.classId = classId;
 	}
 
+	//this method overiding from IPersonAction 
 	@Override
 	public void actionFavorite() {
 		// TODO Auto-generated method stub

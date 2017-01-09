@@ -11,6 +11,7 @@ public class Person {
 	private String contry;
 	private Calendar birthday;
 
+	//Calc age by get year of now from system - year of date of birthday, return -1 if birthday > toDate
 	public int calcAge() {
 		Calendar now = Calendar.getInstance();
 		if(now.after(birthday))
@@ -18,12 +19,14 @@ public class Person {
 		else
 			return -1;
 	}
+	//Calc age by get year parameter toDate - year of date of birthday, return -1 if birthday > toDate 
 	public int calcAge(Calendar toDate){
 		if(toDate.after(birthday))
 			return toDate.get(Calendar.YEAR) - birthday.get(Calendar.YEAR);
 		else
 			return -1;
 	}
+
 	public String getFullname() {
 		return fullname;
 	}
